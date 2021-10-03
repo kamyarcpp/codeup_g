@@ -2,71 +2,45 @@
 #include <windows.h>
 #include <stdlib.h>
 #include <time.h>
+#include <cstring>
 using namespace std;
+
 
 void color()
 {
-	string s;
-	int b;
-	cout<<"che rangi ro mikhahid?"<<endl<<"red"<<endl<<"green"<<endl<<"yellow"<<endl<<"white"<<endl<<"Blue"<<endl<<"random"<<endl;
-	cin>>s;
-	if(s=="red")
-	{
-		b=1;
-		system("color cf ");
-	}
-	else if(s=="green")
-	{
-		system("color af");
-		b=2;
-	}
-	else if(s=="yellow")
-	{
-		system("color 6f");
-		b=3;
-	}
-	else if(s=="white")
-	{
-		system("color f0");
-		b=4;
-	}
-	else if(s=="blue")
-	{
-		system("color bf");
-		b=5;
-	}
-	else if(s=="random")
-	{
-		int n;
+	
+	
+	
+		int w;
 		srand(time(0));
-		n=rand()%5+1;
-		if(n==1)
+		w=rand()%6+1;
+		if(w==1)
 		{
-			system("color cf ");	
-				b=n;
-		}
-		else if(n==2)
+			system("color 7c");
+		}	
+		else if(w==2)
 		{
-				system("color af");
-					b=n;
+			system("color 29");
 		}
-		else if(n==3)
+		else if(w==3)
 		{
-			system("color ef");
-				b=n;
+			system("color 5e");
 		}
-		else if(n==4)
+		else if(w==4)
 		{
-			system("color f0");
-				b=n;
+			system("color 38");
 		}
-		else if(n==5)
+		else if(w==5)
 		{
-				system("color bf");
-				b=n;
+			system("color 48");
 		}
-
-	}
+		else if(w==5)
+		{
+			system("color 5f");
+		}
+	
+	
+	
 }
 void dash() // dash=500
 {
@@ -83,11 +57,12 @@ void dit() // dit=900
 	cout<<".";
 	
 }
-void mayn ()
+void mayn()
 {
-	
+
 
 	string s, x;
+	cout<<"Lotfan matn ra vared konid :"<<endl;
 	getline(cin,s);
 	for(int i=0;i<s.size();i++)
 	{
@@ -235,11 +210,21 @@ void mayn ()
 		{
 			x="----- ";
 		}
+		else if(s[i]!='a' || s[i]!='A' || s[i]!='b' || s[i]!='B'|| s[i]!='c'|| s[i]!='C'|| s[i]!='d'|| s[i]!='D'|| s[i]!='e'|| s[i]!='E'|| s[i]!='f'|| s[i]!='F'|| s[i]!='g'|| s[i]!='G'|| s[i]!='h'|| s[i]!='H'|| s[i]!='i'|| s[i]!='I'|| s[i]!='j'|| s[i]!='J'|| s[i]!='k'|| s[i]!='K'|| s[i]!='l'|| s[i]!='L'|| s[i]!='m'|| s[i]!='M'|| s[i]!='n'|| s[i]!='N'|| s[i]!='o'|| s[i]!='O'|| s[i]!='p'|| s[i]!='P'|| s[i]!='q'|| s[i]!='Q'|| s[i]!='r'|| s[i]!='R'|| s[i]!='s'|| s[i]!='S'|| s[i]!='t'|| s[i]!='T'|| s[i]!='u'|| s[i]!='U'|| s[i]!='v'|| s[i]!='V'|| s[i]!='w'|| s[i]!='W'|| s[i]!='x'|| s[i]!='X'|| s[i]!='y'|| s[i]!='Y'|| s[i]!='z'|| s[i]!='Z'|| s[i]!='0'|| s[i]!='1'|| s[i]!='2'|| s[i]!='3'|| s[i]!='4'|| s[i]!='5'|| s[i]!='6'|| s[i]!='7'|| s[i]!='8'|| s[i]!='9')
+		{
+			x=" ";
+		}
+		else if(s[i]==' ')
+		{
+			Sleep(2100);
+		}
+		
 		for(int j=0;j<x.size();j++)
 		{
 			if(x[j]=='-')
 			{
 				dash();
+				
 			}
 			else if(x[j]=='.')
 			{
@@ -247,9 +232,13 @@ void mayn ()
 			}
 			else if(x[j]==' ')
 			{
-				Sleep(1000);
+			
+			
 				cout<<" ";
+				Sleep(900);
 			}
+			color();
+			
 			
 		}
 		
@@ -259,7 +248,6 @@ void mayn ()
 }
 int main()
 {
-
 	
 	mayn();
 }
